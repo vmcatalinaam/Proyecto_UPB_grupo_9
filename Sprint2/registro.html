@@ -7,13 +7,19 @@
     <title>Registro</title>
     <link rel="stylesheet" href="./estilos.css">
 </head>
-<body>
+<div class="container">
+    <div class="header">
+        <h2>Crear cuenta</h2>
+    </div>
     <form action="" id="form_nuevo_usuario">
+        <label>Nombre</label>
         <input type="text" id="dato_nombre_usuario" placeholder="Nombre de usuario">
-        <input type="number" id="dato_edad_usuario" placeholder="Edad">
-        <input type="password" id="“dato_contrasena" placeholder="Contraseña">
-        <button id="enviar_registro" >Completar</button>
+         <label>Edad</label>
+        <input id="dato_edad_usuario" placeholder="Edad"  maxlength="3">
+        <label>Contraseña</label>
+        <input type="password" id="dato_contrasena" placeholder="Contraseña">
+        <button id="enviar_registro">Enviar</button>
     </form>
-    <script src="validaciones.js"></script>
-</body>
+    <script src="validaciones.js"></script> 
+</div>
 </html>
