@@ -16,7 +16,7 @@ function validar_usuario() {
              if(string.search(/ [A-Z]/) != -1){ 
                 if(edad > 13 && edad < 110){
                    if (/[A-Za-z0-9]+$/.test(string1) == true && string1.length >= 6 ) {
-                        return true;
+                        location.href ="postregistro.html";
                     }else{
                         alert("La contraseña indicada no cumple con los parametros, debe contener letras, numeros o ambas y minimo 6 caracteres")
                         document.getElementById("dato_contrasena").focus();
