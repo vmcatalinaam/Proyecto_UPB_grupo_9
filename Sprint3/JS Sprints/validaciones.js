@@ -41,25 +41,43 @@ module.exports.validar_edad_usuario = validar_edad_usuario;
 module.exports.validar_contrasena = validar_contrasena;
 */
 
-let registros = [];
+et registros = [ ];
 
- 
+function agregarRegistro(){
+	
+	let usuario = document.getElementById("dato_nombre_usuario").value;
+	let edad = document.getElementById("dato_edad_usuario").value;
+	let contrasena = document.getElementById("dato_contrasena").value;
 
-function agregarRegistro()
-{
-    registros[0] = document.getElementById("dato_nombre_usuario");
-    registros[1] =document.getElementById("dato_edad_usuario");
-    registros[2] =document.getElementById("dato_contrasena");
-    alert(nombre_r +" " + ", se ha registrado correctamente")
-
-    console.log(nombre_r + " " + edad_r + " " + string_r);
+  registros.push({usuario , edad , contrasena }); 
+  
 }
 
-function OrdenarArreglo()
-{
 
+function OrdenarArreglo(arreglo){
+
+  for (i=0; i<arreglo.length; i++)
+  {
+    for (j=i+1; j<arreglo.length; j++)
+    {
+      if(arreglo[i].edad>arreglo[j].edad)
+      {
+         aux = arreglo[i];
+         arreglo[i] = arreglo[j];
+         arreglo[j] = aux;
+      }
+    }
+  }
+  for (i=0; i<arreglo.length; i++)
+  {
+    console.log(arreglo.length);
+    console.log(arreglo[i].usuario+" "+arreglo[i].edad+" "+ arreglo[i].contrasena);
+  }
+  return arreglo ;
 }
 
-module.exports.registros = registros;
-module.exports.OrdenarArreglo = OrdenarArreglo;
-module.exports.agregarRegistro =agregarRegistro;
+
+
+module.exports.registros = registros ;
+module.exports.OrdenarArreglo = OrdenarArreglo ;
+module.exports.agregarRegistro = agregarRegistro ;
