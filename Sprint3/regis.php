@@ -6,5 +6,5 @@ $consulta = "INSERT INTO form VALUES ('".$_POST["nombre"]."','".$_POST["edad"]."
 $resultado=mysqli_query($connection,$consulta) or die ("error query");
 mysqli_close($connection);
 echo 'El registro ha sido completado, para el usuario:'.$_POST["nombre"];
-header("Location:"inicio_sesion.html");//CON ESTO REDIRECCIONO EN PHP
+header("Location:"contenido.html");//CON ESTO REDIRECCIONO EN PHP
 ?>
